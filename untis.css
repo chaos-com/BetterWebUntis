@@ -1,0 +1,51 @@
+.lesson-card {
+  background: #f49f25;
+}
+
+.lesson-card.dashed-border {
+  background:  #f49f25;
+  border: 0cm;
+}
+
+.lesson-card.highlighted:has(.exam-indicator).no-shadow {
+  
+  background: rgb(241, 255, 111);
+  --color: rgb(241, 255, 111);
+  color: rgb(241, 255, 111);
+}
+.lesson-card.highlighted:has(.exam-indicator).no-shadow .lesson-card-color-bar {
+  --color: rgb(255, 214, 21);
+}
+
+.lesson-card.cancelled {
+  background: #ccc;
+}
+
+.lesson-card.highlighted:not(.cancelled) {
+  background: #b9d;
+}
+
+.lesson-card-time {
+  color: #444;
+}
+
+.lesson-card-color-bar {
+  --color: #c73;
+}
+
+.lesson-card.cancelled .lesson-card-color-bar {
+  --color: #999;
+}
+
+.lesson-card.highlighted:not(.cancelled) .lesson-card-color-bar {
+  --color: #769;
+}
+
+.lesson-card-substitution-tag {
+  background: transparent;
+  display: inline-block;
+  padding: 0;
+  color: #333;
+  font-weight: bold;
+}
+
