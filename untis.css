@@ -1,20 +1,34 @@
+:root{
+  --normal-Card-background: #f49f25;
+  --exam-Card-background: rgb(241, 255, 111);
+  --special-exam-Card-background: rgb(228, 193, 15);
+  --exam-Card-color-bar: rgb(255, 214, 21);
+}
+
+
+
 .lesson-card {
-  background: #f49f25;
+  background: var(--normal-Card-background);
 }
 
 .lesson-card.dashed-border {
-  background:  #f49f25;
+  background:  var(--normal-Card-background);
   border: 0cm;
 }
 
+.lesson-card.lesson-card.highlighted:not(:has(.lesson-card-indicator-shape--fill-no-outline)):not(:has(.lesson-card-remove-tag)):not(.cancelled):not(:has(.exam-indicator)):not(:has(.additional-indicator)){
+  background: var(--special-exam-Card-background);
+  --color: var(--special-exam-Card-background);
+  color: var(--special-exam-Card-background);
+}
+
 .lesson-card.highlighted:has(.exam-indicator).no-shadow {
-  
-  background: rgb(241, 255, 111);
-  --color: rgb(241, 255, 111);
-  color: rgb(241, 255, 111);
+  background: var(--exam-Card-background);
+  --color: var(--exam-Card-background);
+  color: var(--exam-Card-background);
 }
 .lesson-card.highlighted:has(.exam-indicator).no-shadow .lesson-card-color-bar {
-  --color: rgb(255, 214, 21);
+  --color: var(--exam-Card-color-bar);
 }
 
 .lesson-card.cancelled {
